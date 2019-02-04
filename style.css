@@ -7,4 +7,37 @@ Author URL: http://thesplitpixel.com
 Template: arcade
 Version: 1.0.0
 Text Domain: arcade-child
+GitHub Theme URI: https://github.com/warofthesun/arcade-child
 */
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff; }
+  .navbar-inverse .navbar-nav > li > a:hover {
+    color: #6fb0c7; }
+
+.featured {
+  height: 40vh;
+  max-height: 400px;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%; }
+  .featured__background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-filter: url(#colors);
+            filter: url(#colors); }
+  .featured__logo {
+    width: 250px;
+    height: 250px;
+    position: absolute; }
+    .featured__logo img {
+      width: 100%;
+      height: auto; }

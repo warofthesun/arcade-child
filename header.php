@@ -55,7 +55,32 @@ $space_class = '';
 			</nav><!-- #site-navigation -->
 
 			<?php if (has_post_thumbnail() ) : ?>
-				Oh Hey
+				<svg xmlns="http://www.w3.org/2000/svg" style="display:block;width:0;height:0;">
+			<defs>
+				<filter id="colors">
+				 <feColorMatrix result="base" in="SourceGraphic" type="matrix"
+					 values="0.3333 0.3333 0.3333 0 0
+									 0.3333 0.3333 0.3333 0 0
+									 0.3333 0.3333 0.3333 0 0
+									 0      0      0      1 0"/>
+				 </feColorMatrix>
+				 <feColorMatrix color-interpolation-filters="sRGB" in="base" type="matrix"
+					 values="0.44  0        0        0 0
+									 0      	0.69  0        0 0
+									 0      	0        .78  0 0
+									 0      	0        0        1 0 "/>
+					</feColorMatrix>
+
+				</filter>
+			</defs>
+		</svg>
+				<div class="featured">
+					<?php $bg_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+					<div class="featured featured__background-image" style="background-image:url('<?php echo $bg_image; ?>')"></div>
+					<div class="featured__logo">
+						<img src="<?php the_field('header_logo'); ?>" />
+					</div>
+				</div>
 			<?php else : ?>
 			 <div class="title-card-wrapper">
                 <div class="title-card">
