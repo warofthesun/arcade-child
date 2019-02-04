@@ -79,7 +79,9 @@ $space_class = '';
 					<div class="featured featured__background-image" style="background-image:url('<?php echo $bg_image; ?>')"></div>
 					<div class="featured__logo">
 						<img src="<?php the_field('header_logo'); ?>" />
+						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 					</div>
+
 				</div>
 			<?php else : ?>
 			 <div class="title-card-wrapper">
